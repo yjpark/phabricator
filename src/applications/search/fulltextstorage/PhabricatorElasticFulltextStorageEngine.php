@@ -308,13 +308,13 @@ final class PhabricatorElasticFulltextStorageEngine
           ),
           'analyzer' => array(
             'custom_trigrams' => array(
-              'type' => 'custom',
+              'type' => 'smartcn',
               'filter' => array(
                 'lowercase',
                 'kstem',
                 'trigrams_filter',
               ),
-              'tokenizer' => 'standard',
+              'tokenizer' => 'smartcn_tokenizer',
             ),
           ),
         ),
